@@ -1,4 +1,4 @@
-"""A scritp to download RLU Atari datasets."""
+"""A script to download RLU Atari datasets."""
 
 import argparse
 import rlds
