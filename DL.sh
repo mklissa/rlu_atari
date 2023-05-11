@@ -21,7 +21,7 @@ do
         echo "module load python/3.8" >> temprun.sh
         echo "source RLU_ENV/bin/activate" >> temprun.sh
         echo "cd $HOME/scratch/rlu_atari/" >> temprun.sh
-        k="python download_rlu_atari.py --run $seed --game $envname"
+        k="python download_rlu_atari.py --run $seed --game $envname --download_dir $1"
         echo $k >> temprun.sh
         echo $k
         eval "sbatch temprun.sh"
