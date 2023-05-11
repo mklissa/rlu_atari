@@ -11,7 +11,7 @@ do
             rm temprun.sh
         fi
         echo "#!/bin/bash" >> temprun.sh
-        echo "#SBATCH --output=/tmp/${envname}_seed${seed}_%j.out" >> temprun.sh
+        echo "#SBATCH --output=${envname}_seed${seed}_%j.out" >> temprun.sh
         echo "#SBATCH --job-name=${envname}_seed${seed}_%j" >> temprun.sh
         echo "#SBATCH --nodes=1" >> temprun.sh
         echo "#SBATCH --ntasks=1" >> temprun.sh
@@ -27,3 +27,4 @@ do
         eval "sbatch temprun.sh"
         rm temprun.sh
     done
+done
